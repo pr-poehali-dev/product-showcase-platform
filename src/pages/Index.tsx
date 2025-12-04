@@ -106,56 +106,50 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border sticky top-0 bg-gray-50/95 backdrop-blur-sm z-50">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">ARMA</h1>
-            <nav className="hidden md:flex items-center gap-3">
+          <div className="flex items-center justify-between h-16">
+            <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent tracking-tight">ARMA</h1>
+            <nav className="hidden md:flex items-center gap-1">
               <button
                 onClick={() => setActiveSection('main')}
-                className="text-sm font-medium text-blue-600 underline hover:no-underline hover:text-blue-400 transition-all"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 Главная
               </button>
-              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('products')}
-                className="text-sm font-medium text-blue-600 underline hover:no-underline hover:text-blue-400 transition-all"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 Продукция
               </button>
-              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('services')}
-                className="text-sm font-medium text-blue-600 underline hover:no-underline hover:text-blue-400 transition-all"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 Услуги
               </button>
-              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('prices')}
-                className="text-sm font-medium text-blue-600 underline hover:no-underline hover:text-blue-400 transition-all"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 Цены
               </button>
-              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('offers')}
-                className="text-sm font-medium text-blue-600 underline hover:no-underline hover:text-blue-400 transition-all"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 Спецпредложения
               </button>
-              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('delivery')}
-                className="text-sm font-medium text-blue-600 underline hover:no-underline hover:text-blue-400 transition-all"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 Доставка
               </button>
-              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('contacts')}
-                className="text-sm font-medium text-blue-600 underline hover:no-underline hover:text-blue-400 transition-all"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 Контакты
               </button>
