@@ -164,10 +164,10 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <main className="container sm:px-6 lg:px-8 sm:py-12 my-0 mx-0 py-4 px-8">
         {activeSection === 'main' && (
           <>
-            <div className="mb-12 animate-fade-in">
+            <div className="animate-fade-in mx-0 py-0 my-0 bg-transparent rounded-none">
               <div className="relative max-w-xl mx-auto mb-8">
                 <Icon name="Search" className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
                 <Input
