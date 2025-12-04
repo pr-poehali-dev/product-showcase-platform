@@ -148,7 +148,7 @@ const Index = () => {
                 <Icon name="Search" className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
                 <Input
                   type="text"
-                  placeholder="Поиск товаров..."
+                  placeholder="какой размер трубы ищите..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-12 h-12 text-base rounded-full border-border focus:ring-2 focus:ring-primary/20"
