@@ -89,16 +89,16 @@ const products: Product[] = [
   },
 ];
 
-const categories = ['Все', 'Труба некондиция', 'Столбы для забора', 'Прожилины (лаги)', 'Труба ГОСТ'];
+const categories = ['Труба некондиция', 'Столбы для забора', 'Прожилины (лаги)', 'Труба ГОСТ'];
 
 const Index = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Все');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [activeSection, setActiveSection] = useState('catalog');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const filteredProducts = products.filter((product) => {
-    const matchesCategory = selectedCategory === 'Все' || product.category === selectedCategory;
+    const matchesCategory = !selectedCategory || product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           product.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -155,7 +155,9 @@ const Index = () => {
                 />
               </div>
 
-              <div className="flex flex-wrap justify-center gap-3">
+              <h2 className="text-2xl font-bold text-center mb-6">Популярные товары</h2>
+
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
                 {categories.map((category) => (
                   <Button
                     key={category}
