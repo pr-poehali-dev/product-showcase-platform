@@ -109,7 +109,19 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent tracking-tight">ARMA</h1>
+            <div className="flex items-center gap-8">
+              <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent tracking-tight">ARMA</h1>
+              <div className="hidden lg:flex items-center gap-6 text-sm">
+                <div className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} className="text-blue-600" />
+                  <a href="tel:89529432844" className="text-gray-700 hover:text-blue-600 font-medium">8-952-943-28-44</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="Clock" size={16} className="text-blue-600" />
+                  <span className="text-gray-600">Пн-Сб 9:00-17:00</span>
+                </div>
+              </div>
+            </div>
             <nav className="hidden md:flex items-center gap-1">
               <button
                 onClick={() => setActiveSection('main')}
