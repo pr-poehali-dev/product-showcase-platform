@@ -352,6 +352,83 @@ const Index = () => {
           </div>
         )}
 
+        {activeSection === 'delivery' && (
+          <div className="max-w-4xl mx-auto animate-fade-in">
+            <h2 className="text-4xl font-bold mb-8">Доставка</h2>
+            
+            <div className="space-y-6">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="Truck" size={24} className="text-blue-600" />
+                  Доставка по городу
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-blue-200">
+                    <span className="text-gray-700">Длина 3-4 м (минимальная)</span>
+                    <span className="font-semibold text-lg">2 500 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-blue-200">
+                    <span className="text-gray-700">Длина 6 м до 3-х тонн</span>
+                    <span className="font-semibold text-lg">4 000 ₽</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700">Длина 6-12 м до 20 тонн</span>
+                    <span className="font-semibold text-lg">15 000 ₽</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="Package" size={24} className="text-blue-600" />
+                  Транспорт
+                </h3>
+                <p className="text-gray-700 mb-4">Возим на ГАЗель, 3-тонники бортовые, длинномеры</p>
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                  <p className="text-gray-700 font-medium">Самогруз (длина до 6 м, вес до 5 т)</p>
+                  <p className="text-2xl font-bold text-amber-700 mt-2">7 500 ₽</p>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="MapPin" size={24} className="text-blue-600" />
+                  Дополнительные условия
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Plus" size={20} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>Доставка в отдаленные районы города: <strong>+1 час</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Calculator" size={20} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>Стоимость доставки по области рассчитывается индивидуально</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Clock" size={20} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>Доставка возможна в день заказа</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="CreditCard" size={24} className="text-green-600" />
+                  Оплата
+                </h3>
+                <p className="text-gray-700">
+                  Оплата при получении (по факту доставки) с водителем или переводом на карту банка
+                </p>
+              </div>
+
+              <div className="bg-blue-600 text-white rounded-lg p-6 text-center">
+                <p className="text-lg mb-2">Обратитесь к нам для расчета стоимости материалов с доставкой</p>
+                <a href="tel:89529432844" className="text-2xl font-bold hover:underline">8-952-943-28-44</a>
+              </div>
+            </div>
+          </div>
+        )}
+
         {activeSection === 'contacts' && (
           <div className="max-w-2xl mx-auto animate-fade-in">
             <h2 className="text-4xl font-bold mb-8">Контакты</h2>
