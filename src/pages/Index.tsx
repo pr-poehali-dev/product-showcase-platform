@@ -110,60 +110,52 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">ARMA</h1>
-            <nav className="hidden md:flex items-center gap-6">
+            <nav className="hidden md:flex items-center gap-3">
               <button
                 onClick={() => setActiveSection('main')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'main' ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className="text-sm font-medium text-blue-600 underline hover:no-underline transition-all"
               >
                 Главная
               </button>
+              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('products')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'products' ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className="text-sm font-medium text-blue-600 underline hover:no-underline transition-all"
               >
                 Продукция
               </button>
+              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('services')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'services' ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className="text-sm font-medium text-blue-600 underline hover:no-underline transition-all"
               >
                 Услуги
               </button>
+              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('prices')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'prices' ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className="text-sm font-medium text-blue-600 underline hover:no-underline transition-all"
               >
                 Цены
               </button>
+              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('offers')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'offers' ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className="text-sm font-medium text-blue-600 underline hover:no-underline transition-all"
               >
                 Спецпредложения
               </button>
+              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('delivery')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'delivery' ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className="text-sm font-medium text-blue-600 underline hover:no-underline transition-all"
               >
                 Доставка
               </button>
+              <span className="text-gray-300">/</span>
               <button
                 onClick={() => setActiveSection('contacts')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'contacts' ? 'text-primary' : 'text-muted-foreground'
-                }`}
+                className="text-sm font-medium text-blue-600 underline hover:no-underline transition-all"
               >
                 Контакты
               </button>
