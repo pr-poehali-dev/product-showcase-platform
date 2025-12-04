@@ -94,7 +94,7 @@ const categories = ['Труба некондиция', 'Столбы для за
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeSection, setActiveSection] = useState('catalog');
+  const [activeSection, setActiveSection] = useState('main');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const filteredProducts = products.filter((product) => {
@@ -110,22 +110,54 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">ARMA</h1>
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-6">
               <button
-                onClick={() => setActiveSection('catalog')}
+                onClick={() => setActiveSection('main')}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'catalog' ? 'text-primary' : 'text-muted-foreground'
+                  activeSection === 'main' ? 'text-primary' : 'text-muted-foreground'
                 }`}
               >
                 Главная
               </button>
               <button
-                onClick={() => setActiveSection('about')}
+                onClick={() => setActiveSection('products')}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === 'about' ? 'text-primary' : 'text-muted-foreground'
+                  activeSection === 'products' ? 'text-primary' : 'text-muted-foreground'
                 }`}
               >
-                О товарах
+                Продукция
+              </button>
+              <button
+                onClick={() => setActiveSection('services')}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  activeSection === 'services' ? 'text-primary' : 'text-muted-foreground'
+                }`}
+              >
+                Услуги
+              </button>
+              <button
+                onClick={() => setActiveSection('prices')}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  activeSection === 'prices' ? 'text-primary' : 'text-muted-foreground'
+                }`}
+              >
+                Цены
+              </button>
+              <button
+                onClick={() => setActiveSection('offers')}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  activeSection === 'offers' ? 'text-primary' : 'text-muted-foreground'
+                }`}
+              >
+                Спецпредложения
+              </button>
+              <button
+                onClick={() => setActiveSection('delivery')}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  activeSection === 'delivery' ? 'text-primary' : 'text-muted-foreground'
+                }`}
+              >
+                Доставка
               </button>
               <button
                 onClick={() => setActiveSection('contacts')}
@@ -141,7 +173,7 @@ const Index = () => {
       </header>
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        {activeSection === 'catalog' && (
+        {activeSection === 'main' && (
           <>
             <div className="mb-12 animate-fade-in">
               <div className="relative max-w-xl mx-auto mb-8">
