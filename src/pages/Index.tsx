@@ -109,7 +109,7 @@ const Index = () => {
       <header className="border-b border-border sticky top-0 bg-white/95 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Каталог</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">ARMA</h1>
             <nav className="hidden md:flex items-center gap-8">
               <button
                 onClick={() => setActiveSection('catalog')}
@@ -173,11 +173,11 @@ const Index = () => {
               {filteredProducts.map((product, index) => (
                 <div
                   key={product.id}
-                  className="group animate-fade-in cursor-pointer"
+                  className="group animate-fade-in cursor-pointer h-full flex flex-col"
                   style={{ animationDelay: `${index * 100}ms` }}
                   onClick={() => setSelectedProduct(product)}
                 >
-                  <div className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
+                  <div className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg h-full flex flex-col">
                     <div className="aspect-square overflow-hidden bg-secondary/30">
                       <img
                         src={product.image}
@@ -185,17 +185,17 @@ const Index = () => {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col flex-grow">
                       <Badge variant="secondary" className="mb-3">
                         {product.category}
                       </Badge>
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                         {product.name}
                       </h3>
-                      <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-2 flex-grow">
                         {product.description}
                       </p>
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between mt-auto">
                         <span className="text-2xl font-bold">{product.price.toLocaleString('ru-RU')} ₽</span>
                         <Icon name="ArrowRight" className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" size={24} />
                       </div>
