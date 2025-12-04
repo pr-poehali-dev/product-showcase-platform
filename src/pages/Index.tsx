@@ -96,6 +96,7 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeSection, setActiveSection] = useState('main');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory = !selectedCategory || product.category === selectedCategory;
@@ -129,12 +130,97 @@ const Index = () => {
               >
                 Главная
               </button>
-              <button
-                onClick={() => setActiveSection('products')}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
+              <div 
+                className="relative"
+                onMouseEnter={() => setShowProductsDropdown(true)}
+                onMouseLeave={() => setShowProductsDropdown(false)}
               >
-                Продукция
-              </button>
+                <button
+                  onClick={() => setActiveSection('products')}
+                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 flex items-center gap-1"
+                >
+                  Продукция
+                  <Icon name="ChevronDown" size={16} />
+                </button>
+                {showProductsDropdown && (
+                  <div className="absolute top-full left-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[220px] z-50">
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setSelectedCategory('Труба некондиция');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Трубы некондиция
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setSelectedCategory('Труба ГОСТ');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Труба профильная ГОСТ
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Трубы б/у
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Арматура А500С
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Лист стальной
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Уголок
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Швеллер
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveSection('main');
+                        setShowProductsDropdown(false);
+                      }}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Балка двутавровая
+                    </button>
+                  </div>
+                )}
+              </div>
               <button
                 onClick={() => setActiveSection('services')}
                 className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
